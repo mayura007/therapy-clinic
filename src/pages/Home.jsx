@@ -76,7 +76,7 @@ export default function Home() {
               variants={fadeIn}
               className={isMobile 
                 ? "bg-white/30 backdrop-blur-sm rounded-3xl p-8 shadow-2xl" 
-                : "md:bg-white/30 md:backdrop-blur-sm lg:bg-white/25 lg:backdrop-blur-sm rounded-3xl p-8 shadow-2xl hover:shadow-2xl transition-all duration-500 max-w-3xl transform hover:scale-[1.02] hover:-translate-y-1"
+                : "md:bg-white/30 md:backdrop-blur-sm  lg:bg-white/25 lg:backdrop-blur-sm rounded-3xl p-8 shadow-2xl hover:shadow-2xl transition-all duration-500 max-w-3xl transform hover:scale-[1.02] hover:-translate-y-1"
               }
             >
               <motion.h1

@@ -62,11 +62,11 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 text-2xl font-semibold text-primary-600 transition-all duration-300 hover:text-primary-700">
-            <span className="gradient-text">Kuhu Kulkarni</span>
+            Kuhu Kulkarni
           </Link>
         </div>
 
