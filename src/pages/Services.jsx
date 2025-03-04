@@ -47,16 +47,18 @@ const services = [
 export default function Services() {
   return (
     <div className="bg-gradient-to-b from-primary-50 to-white">
-      <div className="section-container py-12">
+      <div className="section-container py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl font-bold mb-4 text-center">Our Services</h1>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+       
+          <h1 className="text-4xl font-bold mb-2 text-center  py-16">Our Services</h1>
+          <p className="text-gray-600 text-center mb-4 max-w-2xl mx-auto  ">
             Discover our range of professional mental health services designed to support your well-being and personal growth journey.
           </p>
+        
           <div className="space-y-12">
             {services.map((service, index) => (
               <motion.div

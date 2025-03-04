@@ -10,11 +10,13 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Forms from './pages/Forms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
+       <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
