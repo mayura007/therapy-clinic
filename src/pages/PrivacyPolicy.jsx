@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 export default function PrivacyPolicy() {
   return (
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
               <p className="text-gray-600">
-                At Kuhu Kulkarni Psychology, we take your privacy seriously. This
+                At xyz Psychology, we take your privacy seriously. This
                 privacy policy explains how we collect, use, and protect your
                 personal information.
               </p>
@@ -83,16 +83,16 @@ export default function PrivacyPolicy() {
                   <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
                     <FaPhoneAlt className="text-primary-600 text-lg" />
                   </div>
-                  <a href="tel:+919822479011" className="hover:text-primary-600 text-lg">
-                    +91 98224 79011
+                  <a href="tel:+917387311923" className="hover:text-primary-600 text-lg">
+                    +91 7387311923
                   </a>
                 </div>
                 <div className="flex items-center space-x-4 text-gray-600">
                   <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
                     <FaEnvelope className="text-primary-600 text-lg" />
                   </div>
-                  <a href="mailto:kuhukulkarni.k@gmail.com" className="hover:text-primary-600 text-lg">
-                    kuhukulkarni.k@gmail.com
+                  <a href="xyz@gmail.com" className="hover:text-primary-600 text-lg">
+                    xyz@gmail.com
                   </a>
                 </div>
               </div>

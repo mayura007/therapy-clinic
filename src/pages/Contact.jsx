@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaInstagram, FaYoutube, FaLinkedin, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaLinkedin, FaPhoneAlt, FaYoutube } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,8 +42,8 @@ export default function Contact() {
                   <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
                     <FaPhoneAlt className="text-primary-600 text-lg" />
                   </div>
-                  <a href="tel:+919822479011" className="hover:text-primary-600">
-                    +91 98224 79011
+                  <a href="tel:+917387311923" className="hover:text-primary-600">
+                    +91 7387311923
                   </a>
                 </div>
                 <div className="contact-info-item">
@@ -51,10 +51,10 @@ export default function Contact() {
                     <FaEnvelope className="text-primary-600 text-lg" />
                   </div>
                   <a
-                    href="mailto:kuhukulkarni.k@gmail.com"
+                    href="mailto:xyz@gmail.com"
                     className="hover:text-primary-600"
                   >
-                    kuhukulkarni.k@gmail.com
+                   xyz@gmail.com
                   </a>
                 </div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
                   <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
                   <div className="flex space-x-6">
                     <a
-                      href="https://www.instagram.com/kuhuverse/"
+                      href="https://www.instagram.com/xyz/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-pink-100 text-pink-600 hover:bg-pink-200"
@@ -70,7 +70,7 @@ export default function Contact() {
                       <FaInstagram className="text-xl" />
                     </a>
                     <a
-                      href="https://www.youtube.com/@kuhuverse"
+                      href="https://www.youtube.com/@xyz"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-red-100 text-red-600 hover:bg-red-200"

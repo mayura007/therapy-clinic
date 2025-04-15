@@ -1,5 +1,5 @@
+import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -8,17 +8,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-xl font-semibold text-white mb-4">
-              Kuhu Kulkarni
+             Sample Therapy
             </h3>
             <p className="text-gray-400 mb-4">Your journey. Our Compassion.</p>
             <div className="space-y-2">
-              <p className="text-gray-400">Phone: +919822479011</p>
-              <p className="text-gray-400">Email: kuhukulkarni.k@gmail.com</p>
+              <p className="text-gray-400">Phone: +919000000000</p>
+              <p className="text-gray-400">Email: xyz@gmail.com</p>
               <p className="text-gray-400">Hours: Monday-Friday, 11am-5pm</p>
             </div>
             <div className="mt-4 flex space-x-4">
               <a
-                href="https://www.instagram.com/kuhuverse/"
+                href="https://www.instagram.com/xyz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
@@ -26,7 +26,7 @@ export default function Footer() {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.youtube.com/@kuhuverse"
+                href="https://www.youtube.com/xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
@@ -34,7 +34,7 @@ export default function Footer() {
                 <FaYoutube />
               </a>
               <a
-                href="https://www.linkedin.com/in/kuhu-kulkarni"
+                href="https://www.linkedin.com/in/xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"

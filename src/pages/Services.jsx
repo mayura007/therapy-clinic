@@ -142,7 +142,7 @@ const testimonials = [
   {
     name: "Sarah M.",
     type: "Counseling Client",
-    text: "Working with Kuhu has been transformative. Her compassionate approach and expert guidance helped me overcome my anxiety."
+    text: "Working with xyz has been transformative. Her compassionate approach and expert guidance helped me overcome my anxiety."
   },
   {
     name: "James R.",

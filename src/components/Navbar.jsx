@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Bars3Icon, PhoneIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -66,14 +66,13 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5 text-2xl font-semibold text-primary-600 transition-all duration-300 hover:text-primary-700">
-            Kuhu Kulkarni
-          </Link>
+           Sample Therapy          </Link>
         </div>
 
         {/* Mobile Controls */}
         <div className="flex items-center lg:hidden">
           <a 
-            href="tel:+919822479011" 
+            href="tel:+917387311923" 
             className="p-2 text-white bg-primary-600 rounded-full mr-3 shadow-md hover:bg-primary-700 transition-all duration-300 hover:scale-105 active:scale-95"
           >
             <PhoneIcon className="h-5 w-5" />

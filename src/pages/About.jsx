@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 export default function About() {
   return (
@@ -21,7 +21,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-center space-x-6 mb-6">
                   <a
-                    href="https://www.instagram.com/kuhuverse/"
+                    href="https://www.instagram.com/xyz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-pink-600 hover:text-pink-700"
@@ -29,7 +29,7 @@ export default function About() {
                     <FaInstagram />
                   </a>
                   <a
-                    href="https://www.youtube.com/@kuhuverse"
+                    href="https://www.youtube.com/xyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-red-600 hover:text-red-700"
@@ -37,7 +37,7 @@ export default function About() {
                     <FaYoutube />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/kuhu-kulkarni"
+                    href="https://www.linkedin.com/in/xyz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-blue-600 hover:text-blue-700"

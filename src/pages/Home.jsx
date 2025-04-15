@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import backgroundImage from '../assets/background.jpeg'; 
+import { Link } from 'react-router-dom';
+import backgroundImage from '../assets/background.jpeg';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -182,7 +182,7 @@ export default function Home() {
             <blockquote className="text-2xl md:text-3xl font-light italic text-primary-800 leading-relaxed">
               "The journey of healing begins with a single step of courage and continues with compassion."
             </blockquote>
-            <p className="mt-4 text-primary-600 font-medium">— Kuhu Kulkarni</p>
+            <p className="mt-4 text-primary-600 font-medium">Sample Therapy</p>
           </motion.div>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function Home() {
                   <div className="welcome-image-container">
                     <img 
                       src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" 
-                      alt="Kuhu Kulkarni"
+                      alt="xyz"
                       className="welcome-image"
                     />
                   </div>
@@ -217,7 +217,7 @@ export default function Home() {
                   <h2 className="welcome-title">Welcome to Your Healing Journey</h2>
                   <div className="section-divider ml-0 md:mx-0"></div>
                   <p className="welcome-description">
-                    I'm Kuhu Kulkarni, a dedicated mental health professional committed to helping
+                    I'm xyz, a dedicated mental health professional committed to helping
                     you navigate life's challenges and discover your path to wellness. Whether you're
                     dealing with anxiety, seeking personal growth, or looking for support during
                     difficult times, I'm here to guide you with compassion and expertise.
@@ -824,7 +824,7 @@ const testimonials = [
   {
     name: "Mayur B.",
     type: "Anxiety Management",
-    text: "Working with Kuhu has transformed my relationship with anxiety. Her calm presence and practical techniques have given me tools I use daily."
+    text: "Working with xyz has transformed my relationship with anxiety. Her calm presence and practical techniques have given me tools I use daily."
   },
   {
     name: "Rahul S.",
@@ -834,7 +834,7 @@ const testimonials = [
   {
     name: "Anjali K.",
     type: "Family Support",
-    text: "The strategies Kuhu provided helped our family navigate a difficult transition. Her compassionate approach made all the difference."
+    text: "The strategies xyz provided helped our family navigate a difficult transition. Her compassionate approach made all the difference."
   }
 ];
 
