@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         
         {/* Scroll indicator */}
-        <motion.div 
+        {/* <motion.div 
           className="scroll-indicator"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -123,7 +123,7 @@ export default function Home() {
           <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* Breathing Exercise Section - New */}
@@ -182,7 +182,7 @@ export default function Home() {
             <blockquote className="text-2xl md:text-3xl font-light italic text-primary-800 leading-relaxed">
               "The journey of healing begins with a single step of courage and continues with compassion."
             </blockquote>
-            <p className="mt-4 text-primary-600 font-medium">Sample Therapy</p>
+            <p className="mt-4 text-primary-600 font-medium">-xyz</p>
           </motion.div>
         </div>
       </section>
@@ -829,7 +829,7 @@ const testimonials = [
   {
     name: "Rahul S.",
     type: "Personal Growth",
-    text: "I came seeking direction and found not just guidance but also the confidence to make meaningful changes. Kuhu's approach is both gentle and effective."
+    text: "I came seeking direction and found not just guidance but also the confidence to make meaningful changes. xyz's approach is both gentle and effective."
   },
   {
     name: "Anjali K.",

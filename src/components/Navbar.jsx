@@ -257,7 +257,7 @@ export default function Navbar() {
                   </a>
                   <div className="text-sm text-primary-700">
                     <p>Need help?</p>
-                    <p className="font-medium">+91 98224 79011</p>
+                    <p className="font-medium">+91 9000000000</p>
                   </div>
                 </div>
               </div>

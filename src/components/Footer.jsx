@@ -34,7 +34,7 @@ export default function Footer() {
                 <FaYoutube />
               </a>
               <a
-                href="https://www.linkedin.com/in/xyz"
+                href="https://www.linkedin.com/in/abc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
@@ -80,24 +80,14 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link to="/faq" className="text-gray-400 hover:text-white">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link to="/forms" className="text-gray-400 hover:text-white">
-                  Forms
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="text-gray-400 hover:text-white">
-                  Privacy Policy
+                  FAQ's
                 </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Kuhu Kulkarni. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} XYZ. All rights reserved.</p>
         </div>
       </div>
     </footer>

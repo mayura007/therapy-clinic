@@ -78,7 +78,7 @@ export default function Contact() {
                       <FaYoutube className="text-xl" />
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/kuhu-kulkarni"
+                      href="https://www.linkedin.com/in/abc"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-blue-100 text-blue-600 hover:bg-blue-200"
