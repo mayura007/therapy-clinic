@@ -62,7 +62,7 @@ export default function Contact() {
                   <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
                   <div className="flex space-x-6">
                     <a
-                      href="https://www.instagram.com/xyz/"
+                      href="https://www.instagram.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-pink-100 text-pink-600 hover:bg-pink-200"
@@ -70,7 +70,7 @@ export default function Contact() {
                       <FaInstagram className="text-xl" />
                     </a>
                     <a
-                      href="https://www.youtube.com/@xyz"
+                      href="https://www.youtube.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-red-100 text-red-600 hover:bg-red-200"
@@ -78,7 +78,7 @@ export default function Contact() {
                       <FaYoutube className="text-xl" />
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/abc"
+                      href="https://www.linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon bg-blue-100 text-blue-600 hover:bg-blue-200"

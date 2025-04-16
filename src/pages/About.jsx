@@ -21,7 +21,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-center space-x-6 mb-6">
                   <a
-                    href="https://www.instagram.com/xyz/"
+                    href="https://www.instagram.com//"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-pink-600 hover:text-pink-700"
@@ -29,7 +29,7 @@ export default function About() {
                     <FaInstagram />
                   </a>
                   <a
-                    href="https://www.youtube.com/xyz"
+                    href="https://www.youtube.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-red-600 hover:text-red-700"
@@ -37,7 +37,7 @@ export default function About() {
                     <FaYoutube />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/xyz"
+                    href="https://www.linkedin.com/in/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-3xl text-blue-600 hover:text-blue-700"
@@ -58,7 +58,7 @@ export default function About() {
                       With an M.A. in Psychology (Clinical Specialization) from
                       Savitribai Phule Pune University, I bring over a year of
                       experience in clinical psychology and neuropsychology, having
-                      worked under a neuropsychologist at Poona Hospital.
+                      worked under a neuropsychologist at ABC Hospital.
                     </p>
                   </div>
                   
