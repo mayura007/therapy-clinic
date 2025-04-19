@@ -1,22 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { Analytics } from '@vercel/analytics/react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About';
-import Services from './pages/Services';
-import Resources from './pages/Resources';
 import Appointments from './pages/Appointments';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Forms from './pages/Forms';
+import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ScrollToTop from "./components/ScrollToTop";
+import Resources from './pages/Resources';
+import Services from './pages/Services';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
-       <ScrollToTop />
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -32,6 +33,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );

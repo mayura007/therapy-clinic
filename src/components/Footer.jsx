@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
             <div className="mt-4 flex space-x-4">
               <a
-                href="https://www.instagram.com/xyz/"
+                href="https://www.instagram.com//"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
@@ -26,7 +26,7 @@ export default function Footer() {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.youtube.com/xyz"
+                href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
@@ -34,7 +34,7 @@ export default function Footer() {
                 <FaYoutube />
               </a>
               <a
-                href="https://www.linkedin.com/in/abc"
+                href="https://www.linkedin.com/in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white text-2xl"
