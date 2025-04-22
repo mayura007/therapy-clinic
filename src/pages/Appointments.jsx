@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { toast, Toaster } from 'react-hot-toast'; // Import toast and Toaster
 
 export default function Appointments() {
   const [formData, setFormData] = useState({
@@ -12,10 +13,43 @@ export default function Appointments() {
     notes: '',
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    toast.loading('Sending...', { id: 'sending' }); // Show loading toast
+
+    const form = {
+      ...formData,
+      access_key: '1c2cfccd-2377-4c50-98c9-3c2bf97f789a', // Web3Forms API access key
+    };
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          time: '',
+          type: 'initial',
+          notes: '',
+        });
+        toast.success('Appointment request submitted successfully!', { id: 'sending' }); // Success toast
+      } else {
+        toast.error('Something went wrong. Please try again.', { id: 'sending' }); // Error toast
+      }
+    } catch (error) {
+      toast.error('Network error. Please try again.', { id: 'sending' }); // Error toast
+    }
   };
 
   const handleChange = (e) => {
@@ -25,7 +59,6 @@ export default function Appointments() {
     });
   };
 
-  // Generate time slots between 11 AM and 5 PM
   const timeSlots = [];
   for (let hour = 11; hour < 17; hour++) {
     timeSlots.push(`${hour}:00`);
@@ -34,6 +67,9 @@ export default function Appointments() {
 
   return (
     <div className="bg-gradient-to-b from-primary-50 to-white min-h-screen pt-24">
+      {/* This will display the toast notifications */}
+      <Toaster />
+
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,6 +83,7 @@ export default function Appointments() {
               </h1>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Form Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label

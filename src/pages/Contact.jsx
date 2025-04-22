@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaEnvelope, FaInstagram, FaLinkedin, FaPhoneAlt, FaYoutube } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,13 +10,9 @@ export default function Contact() {
     email: '',
     phone: '',
     message: '',
+    botcheck: '',
   });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,8 +21,46 @@ export default function Contact() {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (formData.botcheck !== '') return; // Honeypot triggered
+
+    setIsSubmitting(true);
+
+    const formDataToSend = {
+      access_key: '1c2cfccd-2377-4c50-98c9-3c2bf97f789a',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formDataToSend),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', message: '', botcheck: '' });
+      } else {
+        toast.error('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      toast.error('There was an error sending your message.');
+      console.error('Submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-gradient-to-b from-primary-50 to-white min-h-screen pt-16">
+      <ToastContainer position="top-center" />
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,6 +71,7 @@ export default function Contact() {
           <h1 className="text-4xl font-bold mb-8 text-center">Get in Touch</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left Contact Info */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
               <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
               <div className="space-y-4">
@@ -50,11 +87,8 @@ export default function Contact() {
                   <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
                     <FaEnvelope className="text-primary-600 text-lg" />
                   </div>
-                  <a
-                    href="mailto:xyz@gmail.com"
-                    className="hover:text-primary-600"
-                  >
-                   xyz@gmail.com
+                  <a href="mailto:xyz@gmail.com" className="hover:text-primary-600">
+                    xyz@gmail.com
                   </a>
                 </div>
 
@@ -99,14 +133,21 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* Right Form */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
               <h2 className="text-2xl font-semibold mb-6">Send a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field for spam */}
+                <input
+                  type="text"
+                  name="botcheck"
+                  onChange={handleChange}
+                  value={formData.botcheck}
+                  className="hidden"
+                />
+
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Name
                   </label>
                   <input
@@ -121,10 +162,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email
                   </label>
                   <input
@@ -139,10 +177,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
                   </label>
                   <input
@@ -158,10 +193,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
                   </label>
                   <textarea
@@ -173,7 +205,7 @@ export default function Contact() {
                     onChange={handleChange}
                     className="form-input"
                   />
-                  <p className="phi-warning">
+                  <p className="text-xs text-gray-500 mt-1">
                     Please do not submit any Protected Health Information (PHI).
                   </p>
                 </div>
@@ -181,9 +213,13 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="btn-primary w-full py-3 text-lg font-medium"
+                    disabled={isSubmitting}
+                    className="btn-primary w-full py-3 text-lg font-medium flex justify-center items-center"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <span className="animate-spin border-t-2 border-white rounded-full h-5 w-5 mr-2"></span>
+                    ) : null}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>

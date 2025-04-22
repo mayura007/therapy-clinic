@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/background.jpeg';
+import ContactForm from '../components/contactForm';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -644,101 +646,12 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section - Enhanced */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-primary-50 py-10">
-        <div className="section-container">
-          <div className="max-w-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-center mb-2">Get in Touch</h2>
-              <div className="section-divider"></div>
-              <p className="text-gray-600 text-center mb-6 max-w-2xl mx-auto">We're here to help and answer any questions you might have</p>
-              
-              <motion.div 
-                className="bg-white/80 backdrop-blur-sm bg-opacity-90 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8"
-                whileHover={{ boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
-                transition={{ duration: 0.3 }}
-              >
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        className="form-input"
-                        required
-                      />
-                    </motion.div>
-                    <motion.div
-                      whileHover={{ y: -3 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="form-input"
-                        required
-                      />
-                    </motion.div>
-                  </div>
-                  <motion.div
-                    whileHover={{ y: -3 }}
-                    transition={{ duration:  0.2 }}
-                  >
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      className="form-input"
-                      placeholder="+91 XXXXX XXXXX"
-                      required
-                    />
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Message
-                    </label>
-                    <textarea
-                      rows={4}
-                      className="form-input resize-none"
-                      required
-                    />
-                    <p className="text-sm text-gray-500 italic mt-2">
-                      Please do not submit any Protected Health Information (PHI).
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <button 
-                      type="submit" 
-                      className="btn-primary w-full"
-                    >
-                      Send Message
-                    </button>
-                  </motion.div>
-                </form>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+       <>
+       <ContactForm></ContactForm>
+       <Toaster/>
 
+       </>
+      
       {/* Call to Action - Enhanced */}
       <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-10">
         <div className="section-container text-center">
