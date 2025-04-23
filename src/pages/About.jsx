@@ -55,8 +55,8 @@ export default function About() {
                       Professional Background
                     </h2>
                     <p className="text-gray-600 mb-4">
-                      With an M.A. in Psychology (Clinical Specialization) from
-                      Savitribai Phule Pune University, I bring over a year of
+                      With an Ph.D. in Psychology (Clinical Specialization) from
+                       Pune University, I bring over a year of
                       experience in clinical psychology and neuropsychology, having
                       worked under a neuropsychologist at ABC Hospital.
                     </p>
